@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Create a PDF file with QR codes</title>
+</head>
+<body>
+  <h1>Create a PDF file with QR codes</h1>
+
+  <div>
+    <label for="numPages">Number of Pages:</label>
+    <input type="number" id="numPages" value="100" min="1">
+  </div>
+  <div>
+    <label for="qrSize">QR Code Size (px):</label>
+    <input type="number" id="qrSize" value="50" min="10">
+  </div>
+  <div>
+    <label for="qrX">QR Code X Position (mm):</label>
+    <input type="number" id="qrX" value="10" min="0">
+  </div>
+  <div>
+    <label for="qrY">QR Code Y Position (mm):</label>
+    <input type="number" id="qrY" value="20" min="0">
+  </div>
+  <div>
+    <label for="pageWidth">Page Width (mm):</label>
+    <input type="number" id="pageWidth" value="210" min="50">
+  </div>
+  <div>
+    <label for="pageHeight">Page Height (mm):</label>
+    <input type="number" id="pageHeight" value="297" min="50">
+  </div>
+
+  <canvas style="display: none;" id="qrcode" width="300" height="300"></canvas>
+  <button id="generatePDF">Generate a PDF file</button>
+
+  <script src="./dist/bundle.js"></script>
+</body>
+</html>
