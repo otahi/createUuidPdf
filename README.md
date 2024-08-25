@@ -1,6 +1,7 @@
 # QR Code PDF Generator
 
 This project allows you to generate a PDF with UUID-based QR codes using customizable settings such as page size, QR code size, and position.
+You can visit [the deployed page: CreateUuidPdf](https://otahi.github.io/createUuidPdf/).
 
 ## Features
 
