@@ -88,8 +88,10 @@ document.getElementById("generatePDF").addEventListener("click", async function(
     pdf.addImage(imgData, 'PNG', qrX, qrY, qrSize, qrSize); // QRコードをPDFに追加
     pdf.text(`${uuid}`, qrX, qrY + qrSize); // テキストとしてUUIDを追加
 
-    pdf.addPage();
-
+    // ページを追加(ただし、最後のページは追加しない)
+    if (i !== numPages - 1) {
+      pdf.addPage();
+    }
   }
 
   // PDFをダウンロード
