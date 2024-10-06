@@ -19,6 +19,10 @@ form div {
   display: contents; /* ラベルと入力を一行に表示 */
 }
 
+#pdf {
+  margin-top: 20px;
+}
+
 label {
   font-weight: bold;
   text-align: right;
@@ -30,6 +34,16 @@ input {
   font-size: 16px;
   width: 100%;
   box-sizing: border-box;
+}
+
+input[type="file"] {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 button {

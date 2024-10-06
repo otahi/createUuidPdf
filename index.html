@@ -14,7 +14,7 @@
     <input type="number" id="numPages" value="100" min="1">
   </div>
   <div>
-    <label for="qrSize">QR Code Size (px):</label>
+    <label for="qrSize">QR Code Size (mm):</label>
     <input type="number" id="qrSize" value="50" min="10">
   </div>
   <div>
@@ -35,7 +35,13 @@
   </div>
 
   <canvas style="display: none;" id="qrcode" width="300" height="300"></canvas>
-  <button id="generatePDF">Generate a PDF file</button>
+
+  <!--単一のファイルを置けるようにする-->
+  <div id="pdf">
+    <label for="pdfFile">Source PDF File:</label>
+    <input type="file" id="pdfFile" accept=".pdf">
+  </div>
+  <button id="generatePDF">Generate a PDF file with QR codes</button>
 
   <script src="./dist/bundle.js"></script>
 </body>
